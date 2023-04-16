@@ -2,26 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+main {
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+form {
+  font-size: 0.8em;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+header, footer {
+  padding: 20px;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+form label, form input, form select {
+  display: block;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input, form select {
+  font-weight: normal;
+  background-color: #eee;
+  padding: 10px 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.flex label {
+  width: 50%;
+}
+
+.flex label:first-child {
+  margin-right: 10px;
+}
+
+.flex label:last-child {
+  margin-left: 10px;
+}
+
+button {
+  background-color: #6dc689;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  width: 100%;
+}
+
+.selected {
+  font-weight: bold;
+  color: black;
 }
